@@ -7,7 +7,11 @@ export type CardFace = "UP" | "DOWN";
 export type CardProps = {
   value: number;
 }
-
+/**
+ * This is the card component with an image for the back and value for the front of the card. The card flips when clicked with an animation.
+ * @param value: number 
+ * @returns Card
+ */
 export default function Card({ value }: CardProps) {
   const [face, setFace] = useState<CardFace>("DOWN");
   const isFaceUp = face === "UP";

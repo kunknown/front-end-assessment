@@ -1,7 +1,19 @@
+/*mobile*/
+.card-grid {
+  gap: 2px;
+  grid-template: 125px 125px 125px 125px / 92px 92px 92px 92px;
+}
+/*tablet & desktop*/
+@media only screen and (min-width: 600px) {
+  .card-grid {
+    gap: 4px;
+    grid-template: 175px 175px 175px 175px / 125px 125px 125px 125px;
+  }
+}
+
 .card-grid {
   display: grid;
-  gap: 4px;
-  grid-template: 175px 175px 175px 175px / 125px 125px 125px 125px;
   align-items: center;
   justify-items: center;
+  justify-content: center;
 }

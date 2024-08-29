@@ -1,9 +1,19 @@
 /*mobile*/
-/*tablet*/
-/*desktop*/
 .card {
-  height: 150px;
-  width: 100px;
+  height: 100px;
+  width: 67px;
+}
+/*tablet & desktop*/
+@media only screen and (min-width: 600px) {
+  .card{
+    height: 150px;
+    width: 100px;
+  }  
+}
+
+.card {
+  max-height: 150px;
+  max-width: 100px;
   background-color: transparent;
   perspective: 1000px;
 }

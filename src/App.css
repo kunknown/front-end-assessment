@@ -4,4 +4,23 @@
   padding: 2rem;
 }
 
+/*mobile*/
+.container {
+  max-width: 300px;
+}
+/*tablet*/
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 550px;
+  }
+}
+/*desktop*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
 
+.container {
+  margin: auto
+}
