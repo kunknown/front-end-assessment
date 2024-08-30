@@ -12,8 +12,6 @@ type HeaderProps = {
  */
 
 const Header = ({startNewGameHandler, resetGameHandler}: HeaderProps) => {
-  console.log('Header Rendered!');
-
   // buttons have handlers from the props attached to onclick event to trigger state change in parent component.
   return (
     <header className="header">

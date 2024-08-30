@@ -21,14 +21,12 @@ type CardProps = {
  */
 
 export default function Card({ value, resetCard, isDisabled, id, isMatched }: CardProps) {
-  console.log('Card Rendered!');
   const [face, setFace] = useState<CardFace>("DOWN"); // state to keep track of the card's position
   const isFaceUp = face === "UP";
 
   // turn card face-down when resetCard state changes to true
   useEffect(() => {
     if(resetCard) {
-      console.log('resetCard');
       setFace("DOWN");
     }
   }, [resetCard]);

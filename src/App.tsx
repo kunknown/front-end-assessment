@@ -7,6 +7,7 @@ import { getNewCardValues } from './shared/utility';
 import './App.css';
 
 const App = () => {
+  console.log('App');
   const [cardValues, setCardValues] = useState([1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]);
   const [firstSelection, setFirstSelection] = useState<{value: number | null, index: number | null}>({value: null, index: null}); // state for first card selection
   const [secondSelection, setSecondSelection] = useState<{value: number | null, index: number | null}>({value: null, index: null}); // state for second card selection
@@ -16,7 +17,9 @@ const App = () => {
   const matchedPairs = useMemo(() => new Set(), []); // set to keep track of pairs that have already been matched.
   const stopSelection = !!(firstSelection.value && secondSelection.value); // stopSelection = true when 2 cards have been selected.
   
+  console.log('selections:', firstSelection, secondSelection);
   const onClickHandler: MouseEventHandler = (e) => {
+    console.log('inside the click');
     // get to the (Card button) parent node.
     const target = (e.target as HTMLElement)?.parentNode?.parentNode?.parentNode as HTMLElement;
 
@@ -35,7 +38,7 @@ const App = () => {
     } else { // set secondSelection state if first is not null.
       setSecondSelection({value: Number(value), index: Number(index)});
     }
-  }
+  }; 
 
   useEffect(() => {
     // process when both cards have been picked.
