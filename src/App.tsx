@@ -1,30 +1,17 @@
+import { useState } from 'react'
 import './App.css'
 import Card from './components/card'
 import CardGrid from './components/card-grid'
 import Header from './components/header'
 
-const App = () => (
+const App = () => {
+  const [resetGame, setResetGame] = useState<boolean>(false);
+  const [startNewGame, setStartNewGame] = useState<boolean>(false);
+  return (
     <div className="container">
-      <Header />
-      <CardGrid>
-        <Card value={1}/>
-        <Card value={2}/>
-        <Card value={2}/>
-        <Card value={1}/>
-        <Card value={1}/>
-        <Card value={2}/>
-        <Card value={2}/>
-        <Card value={1}/>
-        <Card value={1}/>
-        <Card value={2}/>
-        <Card value={2}/>
-        <Card value={1}/>
-        <Card value={1}/>
-        <Card value={2}/>
-        <Card value={2}/>
-        <Card value={1}/>
-      </CardGrid>
+      <Header startNewGameHandler={() => {setStartNewGame(true)}} resetGameHandler={() => {setResetGame(true)}}/>
+      <CardGrid startNewGame={startNewGame} resetGame={resetGame} startNewGameHandler={() => {setStartNewGame(false)}} resetGameHandler={() => setResetGame(false)} />
     </div>
-)
+)}
 
 export default App

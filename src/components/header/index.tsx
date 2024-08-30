@@ -1,6 +1,12 @@
 import './header.css';
 
-const Header = () => {
+type HeaderProps = {
+  startNewGameHandler: () => void;
+  resetGameHandler: () => void;
+}
+
+const Header = ({startNewGameHandler, resetGameHandler}: HeaderProps) => {
+
   return (
     <header className="header">
       <div className="container">
@@ -8,8 +14,8 @@ const Header = () => {
           <h1>Memory Card Game</h1>
         </div>
         <div className="buttons">
-          <button>NEW GAME</button>
-          <button>RESET</button>
+          <button onClick={startNewGameHandler}>NEW GAME</button>
+          <button onClick={resetGameHandler}>RESET</button>
         </div>
       </div>
     </header>

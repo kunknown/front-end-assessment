@@ -51,3 +51,7 @@
   background-color: gray;
   transform: rotateY(180deg);
 }
+
+.matched {
+  opacity: 0.75;
+}
