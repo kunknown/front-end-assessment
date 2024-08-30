@@ -14,7 +14,7 @@ type CardGridProps = {
  */
 
 export default function CardGrid({onClickHandler, children}: PropsWithChildren<CardGridProps>) {
-  // onclick handler is attached to notify parent when a card is clicked;
+  // onclick handler is attached to notify parent when a child card is clicked;
   return ( 
     <div className={classNames("card-grid")} onClick={onClickHandler}>
       {children}

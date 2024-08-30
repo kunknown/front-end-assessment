@@ -20,7 +20,7 @@ type CardProps = {
  * @returns Card
  */
 
-export default function Card({ value, resetCard, isDisabled, id, isMatched }: CardProps) {
+export default function Card({ value, resetCard, isDisabled, id, isMatched }: Readonly<CardProps>) {
   const [face, setFace] = useState<CardFace>("DOWN"); // state to keep track of the card's position
   const isFaceUp = face === "UP";
 
