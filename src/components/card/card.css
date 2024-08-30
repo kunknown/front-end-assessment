@@ -17,6 +17,15 @@
   background-color: transparent;
   padding: 0;
   border: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card.matched:hover {
+  transform: none;
 }
 
 .flip-card-container {

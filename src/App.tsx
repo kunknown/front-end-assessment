@@ -18,7 +18,7 @@ const App = () => {
   
   const onClickHandler: MouseEventHandler = (e) => {
     // get to the (Card button) parent node.
-    const target = e.target?.parentNode?.parentNode?.parentNode as HTMLElement;
+    const target = (e.target as HTMLElement)?.parentNode?.parentNode?.parentNode as HTMLElement;
 
     // get the id and extract the value and index from the id.
     const id = target.getAttribute("id")?.split("-") ?? [null, null];
