@@ -1,12 +1,12 @@
 /*mobile*/
 .card-grid {
-  gap: 2px;
+  gap: auto;
   grid-template: 125px 125px 125px 125px / 92px 92px 92px 92px;
 }
 /*tablet & desktop*/
 @media only screen and (min-width: 600px) {
   .card-grid {
-    gap: 4px;
+    gap: auto;
     grid-template: 175px 175px 175px 175px / 125px 125px 125px 125px;
   }
 }

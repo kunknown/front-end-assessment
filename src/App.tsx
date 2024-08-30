@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './components/card'
 import CardGrid from './components/card-grid'
 import Header from './components/header'
 
