@@ -1,3 +1,5 @@
+import { CARDS } from "./constants";
+
 export const getNewCardValues = () => {
   const valueDistributionSetOne = new Set([1, 2, 3, 4, 5, 6, 7, 8]);
   const valueDistributionSetTwo = new Set([1, 2, 3, 4, 5, 6, 7, 8]);
@@ -17,4 +19,9 @@ export const getNewCardValues = () => {
     valueDistributionSetTwo.delete(randomNumTwo);
   }
   return newValuesArr;
+};
+
+export const shuffleCards = () => {
+  const shuffled = [...CARDS].sort(() => 0.5 - Math.random());
+  return shuffled.map((card, index) => ({ ...card, id: index }));
 };

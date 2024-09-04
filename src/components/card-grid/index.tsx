@@ -1,23 +1,17 @@
-import classNames from 'classnames'
-import { MouseEventHandler, PropsWithChildren } from 'react'
-
+import Card, {TCard} from '../card';
 import './card-grid.css';
 
-type CardGridProps = {
-  onClickHandler: MouseEventHandler;
-}
+const CardGrid = ({ cards, onCardClick }: { cards: TCard[], onCardClick: (clickedCard: TCard) => void }) => { console.log('CardGrid'); 
+  return (
+  <div className="card-grid">
+    {cards.map((card) => (
+      <Card 
+        key={card.id} 
+        card={card} 
+        onClick={onCardClick} 
+      />
+    ))}
+  </div>
+)};
 
-/**
- * This is a layout component that styles the array of cards in a grid layout.
- * @param CardGridProps 
- * @returns CardGrid
- */
-
-export default function CardGrid({onClickHandler, children}: PropsWithChildren<CardGridProps>) {
-  // onclick handler is attached to notify parent when a child card is clicked;
-  return ( 
-    <div className={classNames("card-grid")} onClick={onClickHandler}>
-      {children}
-    </div>
-  )
-}
+export default CardGrid;
